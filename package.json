@@ -1,0 +1,35 @@
+{
+    "name": "drawing-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "watch:sass": "sass Sass/Main.scss Stylesheet/Style.css -w",
+        "devserver": "live-server",
+        "start": "npm-run-all --parallel devserver watch:sass",
+        "compile:sass": "sass Sass/Main.scss Stylesheet/Style.compile.css",
+        "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' Stylesheet/Style.compile.css -o Stylesheet/Style.prefix.css",
+        "compress:css": "sass Stylesheet/Style.prefix.css Stylesheet/Style.css --style compressed",
+        "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/im-parsa/drawing-app.git"
+    },
+    "keywords": [
+        "im-parsa"
+    ],
+    "author": "im-parsa",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/im-parsa/drawing-app/issues"
+    },
+    "homepage": "https://github.com/im-parsa/drawing-app#readme",
+    "devDependencies": {
+        "autoprefixer": "^10.4.0",
+        "live-server": "^1.2.1",
+        "npm-run-all": "^4.1.5",
+        "postcss-cli": "^9.0.2",
+        "sass": "^1.43.5"
+    }
+}

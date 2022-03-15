@@ -1,0 +1,37 @@
+.toolbox
+{
+    display: flex;
+
+    width: 810px;
+    padding: .5rem;
+    border-radius: 0 0 2rem 2rem;
+    background-color: rgb(31, 121, 210);
+    border: 1rem solid rgb(31, 121, 210);
+
+    & > *
+    {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+        margin: 0.25rem;
+        padding: 0.25rem;
+        border-radius: 1rem;
+        background-color: #ffffff;
+    }
+
+
+    & > input
+    {
+        padding: 0;
+    }
+
+    & > *:last-child
+    {
+        margin-left: auto;
+    }
+}
