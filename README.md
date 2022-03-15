@@ -1,4 +1,4 @@
-#  Drawing Website
+# 🎨 Drawing Website
 > nice drawing website written in vanilla js
 
 <br/>
